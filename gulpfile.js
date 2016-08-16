@@ -16,6 +16,8 @@ var imagemin = require("gulp-imagemin");
 var del = require("del");
 var run = require("run-sequence");
 var fs = require("fs");
+var fileinclude = require('gulp-file-include'),
+  gulp = require('gulp');
 
 // СБОРКА
 
@@ -129,6 +131,17 @@ gulp.task("stylelocal", function() {
     .pipe(gulp.dest("css"));
 });
 
+// сборка html
+gulp.task('fileinclude', function() {
+  gulp.src(['index.html'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest('.'));
+});
+
+
 // ls - отслеживание изменений в исходниках
 gulp.task("ls", function() {
   server.init({
@@ -136,7 +149,8 @@ gulp.task("ls", function() {
   });
 
   gulp.watch("sass/**/*.{scss,sass}", ["stylelocal", server.reload]);
+  gulp.watch("html/**/*.html", ["fileinclude", server.reload]);
   gulp.watch("*.html").on("change", server.reload);
 });
-
+  //
 
