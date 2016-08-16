@@ -133,7 +133,7 @@ gulp.task("stylelocal", function() {
 
 // сборка html
 gulp.task('fileinclude', function() {
-  gulp.src(['start.html'])
+  gulp.src(['html/_start.html'])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
