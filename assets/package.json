@@ -1,0 +1,42 @@
+{
+  "name": "denzakh",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Личный проект Дениса Захарченко",
+  "author": "Денис Захарченко",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:denzakh/denzakh.git"
+  },
+  "bugs": {
+    "url": "https://github.com/denzakh/denzakh/issues"
+  },
+  "homepage": "https://github.com/denzakh/denzakh",
+  "devDependencies": {
+    "autoprefixer": "6.3.6",
+    "browser-sync": "2.12.10",
+    "css-mqpacker": "^5.0.1",
+    "del": "^2.2.1",
+    "editorconfig-tools": "0.1.1",
+    "gulp": "3.9.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "2.3.1",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-svgstore": "^6.0.0",
+    "run-sequence": "^1.2.2"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp build && gulp serve"
+  },
+  "engines": {
+    "node": "5.11"
+  },
+  "dependencies": {
+    "del": "^2.2.1"
+  }
+}
