@@ -1,0 +1,15 @@
+
+// основные подключаемые файлы
+
+@import "general/variables";
+@import "general/mixins";
+
+@import "general/normalize";
+@import "general/fonts";
+@import "general/general";
+
+// повторяющиеся элементы
+
+@import "blocks/page-header";
+@import "blocks/page-footer";
+

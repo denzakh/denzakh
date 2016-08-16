@@ -17,6 +17,8 @@ var del = require("del");
 var run = require("run-sequence");
 var fs = require("fs");
 
+// СБОРКА
+
 // 1. очистка
 gulp.task("clean", function() {
     return del("build");
@@ -91,16 +93,18 @@ gulp.task("build", function(fn) {
   );
 });
 
-// serv - отслеживание изменений
+// serve - отслеживание изменений в билде
 gulp.task("serve", function() {
   server.init({
-    server: "build"
+    server: "../build"
   });
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("*.html").on("change", server.reload);
 });
 
+
+// ASSETS
 
 // Локальная сборка стилей
 gulp.task("stylelocal", function() {
@@ -125,7 +129,7 @@ gulp.task("stylelocal", function() {
     .pipe(gulp.dest("css"));
 });
 
-
+// ls - отслеживание изменений в исходниках
 gulp.task("ls", function() {
   server.init({
     server: "."

@@ -1,0 +1,41 @@
+
+body {
+  background: red;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  color: $text-color-main;
+  min-width: 320px;
+}
+
+.container {
+  box-sizing: border-box;
+  position: relative;
+  width: $mobile-inner-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media #{$tablet-widths} {
+    width: $tablet-inner-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media #{$desktop-widths} {
+    width: $desktop-inner-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+img {
+  vertical-align:bottom;
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+

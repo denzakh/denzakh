@@ -2,7 +2,7 @@
   "name": "denzakh",
   "version": "0.1.0",
   "private": true,
-  "description": "Личный проект Дениса Захарченко",
+  "description": "Личный проект",
   "author": "Денис Захарченко",
   "repository": {
     "type": "git",
@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/denzakh/denzakh/issues"
   },
-  "homepage": "https://github.com/denzakh/denzakh",
+  "homepage": "https://github.com/denzakh",
   "devDependencies": {
     "autoprefixer": "6.3.6",
     "browser-sync": "2.12.10",
@@ -30,8 +30,7 @@
     "run-sequence": "^1.2.2"
   },
   "scripts": {
-    "build": "gulp build",
-    "start": "gulp build && gulp serve"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
     "node": "5.11"
