@@ -133,11 +133,12 @@ gulp.task("stylelocal", function() {
 
 // сборка html
 gulp.task('fileinclude', function() {
-  gulp.src(['index.html'])
+  gulp.src(['start.html'])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
     }))
+    .pipe(rename("index.html"))
     .pipe(gulp.dest('.'));
 });
 
@@ -148,9 +149,13 @@ gulp.task("ls", function() {
     server: "."
   });
 
+  run(
+    "fileinclude"
+  );
+
   gulp.watch("sass/**/*.{scss,sass}", ["stylelocal", server.reload]);
   gulp.watch("html/**/*.html", ["fileinclude", server.reload]);
   gulp.watch("*.html").on("change", server.reload);
 });
-  //
+  //gulp.watch("*.html").on("change", server.reload);
 
